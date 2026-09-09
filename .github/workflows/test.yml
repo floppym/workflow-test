@@ -4,7 +4,8 @@ jobs:
     runs-on: ubuntu-24.04
     container: public.ecr.aws/lambda/python:3.14
     steps:
+      - run: env
       - run: pwd
-      - run: find .
       - run: cat /etc/passwd
-      - run: setpriv --help
+      - run: dnf install -y findutils
+      - run: find .
