@@ -5,5 +5,5 @@ jobs:
     steps:
       - uses: docker://public.ecr.aws/lambda/python:3.14
         with:
-          entrypoint: /bin/sh -c
-          args: env
+          entrypoint: /bin/sh
+          args: -c echo "hello world"
