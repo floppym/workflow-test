@@ -4,3 +4,5 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - run: find /etc/apt/sources.list.d
+      - run: cat /etc/apt/sources.list
+      - run: cat /etc/apt/sources.list.d/*
