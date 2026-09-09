@@ -8,3 +8,5 @@ jobs:
       - run: pwd
       - run: cat /etc/passwd
       - run: command -v python3
+      - run: cat /proc/self/mountinfo
+      - run: ls -ld /var/task
