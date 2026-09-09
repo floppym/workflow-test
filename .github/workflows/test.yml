@@ -7,4 +7,3 @@ jobs:
         with:
           entrypoint: /bin/sh -c
           args: env
-        run: env
