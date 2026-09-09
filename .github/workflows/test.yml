@@ -4,4 +4,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: docker://public.ecr.aws/lambda/python:3.14
-      - run: env
+        with:
+          entrypoint: /bin/sh -c
+          args: env
+        run: env
