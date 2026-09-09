@@ -2,7 +2,9 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-24.04
+    container: public.ecr.aws/lambda/python:3.14
     steps:
-      - run: sudo rm -f /etc/apt/sources.list.d/*google-chrome*
-      - run: sudo rm -f /etc/apt/sources.list.d/*microsoft*
-      - run: sudo apt-get update
+      - run: pwd
+      - run: find .
+      - run: cat /etc/passwd
+      - run: setpriv --help
