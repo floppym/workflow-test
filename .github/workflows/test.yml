@@ -3,6 +3,6 @@ jobs:
   test:
     runs-on: ubuntu-24.04
     steps:
-      - run: find /etc/apt/sources.list.d
-      - run: cat /etc/apt/sources.list
-      - run: cat /etc/apt/sources.list.d/*
+      - run: rm -f /etc/apt/sources.list.d/*google-chrome*
+      - run: rm -f /etc/apt/sources.list.d/*microsoft*
+      - run: apt-get update
