@@ -2,11 +2,6 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-24.04
-    container: public.ecr.aws/lambda/python:3.14
     steps:
+      - uses: docker://public.ecr.aws/lambda/python:3.14
       - run: env
-      - run: pwd
-      - run: cat /etc/passwd
-      - run: command -v python3
-      - run: cat /proc/self/mountinfo
-      - run: ls -ld /var/task
