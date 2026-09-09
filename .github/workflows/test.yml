@@ -7,5 +7,4 @@ jobs:
       - run: env
       - run: pwd
       - run: cat /etc/passwd
-      - run: dnf install -y findutils
-      - run: find .
+      - run: command -v python3
