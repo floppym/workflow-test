@@ -2,8 +2,7 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-24.04
+    container: public.ecr.aws/lambda/python:3.14
     steps:
-      - uses: docker://public.ecr.aws/lambda/python:3.14
-        with:
-          entrypoint: /bin/sh
-          args: -c echo "hello world"
+      - uses: actions/checkout@v7
+      - run: cat /etc/os-release
