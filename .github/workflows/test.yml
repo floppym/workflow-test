@@ -4,3 +4,5 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - run: echo "$PATH"
+      - run: command -v gcc && gcc -v
+      - run: command -v clang && clang -v
