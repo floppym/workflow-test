@@ -2,7 +2,5 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-24.04
-    container: alpine:latest
     steps:
-      - uses: actions/checkout@v7
-      - run: cat /etc/os-release
+      - run: echo "$PATH"
