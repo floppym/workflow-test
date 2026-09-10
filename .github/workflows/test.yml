@@ -4,6 +4,6 @@ jobs:
     runs-on: ubuntu-24.04
     container: public.ecr.aws/lambda/python:3.14
     steps:
-      - run: dnf install -y git
+      - run: dnf install -y git-core
       - uses: actions/checkout@v7
       - run: cat /etc/os-release
